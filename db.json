@@ -1,0 +1,98 @@
+{
+  "utenti": [
+    {
+      "id": "2",
+      "codice_fiscale": "VRNGPP90P01H501Y",
+      "nome": "Giuseppe",
+      "cognome": "Verdi",
+      "data_nascita": "1990-02-15",
+      "user_id": 1
+    },
+    {
+      "id": "3",
+      "codice_fiscale": "BNCMRA78P01H501X",
+      "nome": "Anna",
+      "cognome": "Bianchi",
+      "data_nascita": "1978-03-20",
+      "user_id": 1
+    },
+    {
+      "id": "4",
+      "codice_fiscale": "FNCNDR82A01H501W",
+      "nome": "Carlo",
+      "cognome": "D'Angelo",
+      "data_nascita": "1982-04-25",
+      "user_id": 1
+    },
+    {
+      "id": "5",
+      "codice_fiscale": "MRTMRA90L01H501K",
+      "nome": "Laura",
+      "cognome": "Martini",
+      "data_nascita": "1990-05-30",
+      "user_id": 2
+    },
+    {
+      "id": "6",
+      "codice_fiscale": "CTGNLN76A01H501R",
+      "nome": "Federico",
+      "cognome": "Conti",
+      "data_nascita": "1976-06-05",
+      "user_id": 2
+    },
+    {
+      "id": "7",
+      "codice_fiscale": "MRTGPP85P01H501M",
+      "nome": "Giulia",
+      "cognome": "Gallo",
+      "data_nascita": "1985-07-10",
+      "user_id": 2
+    },
+    {
+      "id": "8",
+      "codice_fiscale": "LNZMRA80C01H501T",
+      "nome": "Simone",
+      "cognome": "Ruggeri",
+      "azienda": "Azienda 8",
+      "user_id": 2
+    },
+    {
+      "id": "9",
+      "codice_fiscale": "GNRMRA87M01H501L",
+      "nome": "Elena",
+      "cognome": "Giorgi",
+      "data_nascita": "1987-09-20",
+      "user_id": 2
+    },
+    {
+      "id": "10",
+      "codice_fiscale": "PLCRSN88D01H501G",
+      "nome": "Marco",
+      "cognome": "Palumbo",
+      "data_nascita": "1988-10-25",
+      "user_id": 2
+    },
+    {
+      "id": "dc9b",
+      "codice_fiscale": "XYZ12345A01H501B",
+      "nome": "Nome Utente",
+      "cognome": "Cognome Utente",
+      "data_nascita": "1995-11-30",
+      "user_id": 3
+    }
+  ],
+  "admins": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin1234",
+      "utenti": []
+    },
+    {
+      "id": "2",
+      "username": "admin2",
+      "password": "nodejs123",
+      "utenti": []
+    }
+  ]
+}

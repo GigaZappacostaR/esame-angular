@@ -1,0 +1,58 @@
+<div class="client-list-container">
+  <h1 class="title">Elenco Clienti</h1>
+  <form [formGroup]="userForm" (ngSubmit)="saveUser()" class="client-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="nome" placeholder="Inserisci il nome" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Cognome</mat-label>
+      <input matInput formControlName="cognome" placeholder="Inserisci il cognome" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Data di Nascita</mat-label>
+      <input matInput formControlName="data_nascita" type="date" />
+    </mat-form-field>
+
+    <div class="buttons-container">
+      <button mat-raised-button type="submit" class="save-button">Salva</button>
+      <button mat-button type="button" (click)="cancelEdit()" class="cancel-button">Annulla</button>
+    </div>
+  </form>
+
+  <table mat-table [dataSource]="users" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>ID</th>
+      <td mat-cell *matCellDef="let user">{{ user.id }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef>Nome</th>
+      <td mat-cell *matCellDef="let user">{{ user.nome }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="cognome">
+      <th mat-header-cell *matHeaderCellDef>Cognome</th>
+      <td mat-cell *matCellDef="let user">{{ user.cognome }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="data_nascita">
+      <th mat-header-cell *matHeaderCellDef>Data di Nascita</th>
+      <td mat-cell *matCellDef="let user">{{ user.data_nascita | date }}</td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Azioni</th>
+      <td mat-cell *matCellDef="let user">
+        <button mat-button (click)="editUser(user)" class="edit-button">Modifica</button>
+        <button mat-button (click)="deleteUser(user.id)" class="delete-button">Elimina</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

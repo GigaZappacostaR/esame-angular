@@ -1,0 +1,32 @@
+<div class="login-container">
+  <div class="login-card">
+    <h1 class="login-title">Welcome to the Portal</h1>
+    <h2 class="login-title">Please Sign In</h2>
+    <form #loginForm="ngForm" (ngSubmit)="login()">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          [(ngModel)]="username"
+          name="username"
+          required
+          placeholder="Enter your username"
+        />
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          [(ngModel)]="password"
+          name="password"
+          required
+          placeholder="Enter your password"
+        />
+      </div>
+      <button type="submit" class="login-btn">Login</button>
+      <div *ngIf="errorMessage" class="error-message show">{{ errorMessage }}</div>
+    </form>
+  </div>
+</div>
